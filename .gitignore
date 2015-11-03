@@ -1,0 +1,15 @@
+*.tags
+*.tags_sorted_by_file
+*.o
+*.a
+tags
+cscope.in.out
+cscope.out
+cscope.po.out
+libworker.so
+log/
+log/*
+robotPassContent
+robotif
+libchaos.a 
+libconfig.a 

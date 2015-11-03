@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GBK" ?>
+<Item>
+    <simi_result>
+        <CorrectPin name="拼音纠错" />
+        <SimilarWords name="相关词语" />
+    </simi_result>
+    <GBresult>
+        <GBresult_info>
+            <ret name="返回值">-6</ret>
+        </GBresult_info>
+    </GBresult>
+</Item>
+<?xml version="1.0" encoding="GBK" ?>
+<Item>
+    <simi_result>
+        <CorrectPin name="拼音纠错" />
+        <SimilarWords name="相关词语" />
+    </simi_result>
+    <GBresult>
+        <GBresult_info>
+            <ret name="返回值">-6</ret>
+        </GBresult_info>
+    </GBresult>
+</Item>

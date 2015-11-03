@@ -1,0 +1,40 @@
+简要介绍：
+chaos是一个全异步的网络框架，目的是减少后台开发人员工作量，避免重复性开发，以使开发人员将更多的精力投入到业务逻辑的开发中。
+
+1.跑起来
+
+下面是简要说明
+下面的代码需要自己实现的只有MyHandler的两个函数
+
+main.cpp
+{
+	CoLoger     loger;		//实例化日志
+	loger.init(args);		//初始化，args请看函数定义
+
+	CoCycle     cycle;		//框架的骨架，在所有和框架有联系的cpp中都应该定义  extern CoCycle *cycle,以便于引用
+	g_cycle = &cycle;
+
+	CoChannel channel;		//数据通道,支持TCP, UDP
+
+	channel.init(&loger)	//初始化通道
+
+	MyHandler		handler;	//数据处理者，继承自CoHandler,要实现handle, close两个函数
+
+	handler.mWriteTimeoutSec = 0;   //写超时时间设置，0为不限
+	handler.mReadTimeoutSec = 0;	//读超时时间设置，0为不限
+
+	/*创建通道,目前支持两种, 
+	 * client:主动连接型(函数名:createClientChannel), 
+	 * server:侦听服务型(函数名:createServerChannel)
+	 */
+	channel.createServerChannel(ip, port, &handler, CONN_MODE);
+
+
+	while(1) {
+		channel.runOnce();
+	}
+
+	//让我们跑起来吧
+}
+
+后续补上详细的说明
