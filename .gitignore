@@ -13,3 +13,4 @@ robotPassContent
 robotif
 libchaos.a 
 libconfig.a 
+*.files
